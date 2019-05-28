@@ -44,6 +44,9 @@ header{
     width: 100%;
     /* to fix hearder(father block) collapse caused by inline blocks both floating */
     overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 section,
 div{
@@ -53,24 +56,22 @@ div{
     margin: 0 auto;
     padding: 0;
     /* main content size 960px wide */
-    width: 960px;
     /* same as above */
-    display: block;
+    overflow: hidden;
 }
 h1{
     float: left;
     color: white;
     background-color: #4aaaa5;
     font-family: 'Georgia', Times, Times New Roman, serif;
-    margin: 0;
+    margin: 0 10px;
     padding: 20px;
 }
 /* nav bars disapper when change size */
 nav{
     float: right;
     margin: 0;
-    padding: 20px 10px 20px 10px ;
-    height: auto;
+    padding: 20px 10px;
     
 }
 a{
@@ -81,11 +82,11 @@ a{
 /* end of the style of heard */
 /* main content style starts here */
 .main-content{
-    padding: 0;
+    padding-left: 10px;
     /* backgroundimage of the main content div */
     background-image: url('../images/papyrus.png');
     /* to make div adjust height by itself */
-    margin: 40px auto;
+    margin-top: 40px;
     width: 960px;
     height: auto;
 }
@@ -105,6 +106,8 @@ img{
     max-height: 100%;
     width: 20%;
     padding: 20px;
+    min-width: 150px;
+    min-height: 150px;
 }
 p{
     font-size: 20px;
@@ -178,24 +181,30 @@ h3{
 
 /* responsive style */
 /* 980px */
-@media screen (max-width: 980px){
-    body{
-
-    }
+@media screen and (max-width: 980px){
     header{
-
+        background-color: black;
     }
     .main-content{
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
 
+
+    }
+    #my-bio{
+        width: auto;
+        padding: 20px;
     }
 
 }
 /* 768px */
-@media screen (max-width: 768px){
+@media screen and (max-width: 768px){
     body{
 
     }
     header{
+        background-color: blue;
 
     }
     .main-content{
@@ -203,15 +212,40 @@ h3{
     }
 
 }
-@media screen (max-width: 640px){
-    body{
-
-    }
+@media screen and (max-width: 640px){
+  
     header{
+        background-color:green;
+        width: auto;
 
     }
-    .main-content{
+    h1{
+        float: none;
+        text-align: center;
+        width: auto;
+        margin: 0;
+    }
+    nav{
+        float: none;
+        text-align: center;
+    }
+    img{
+        float: none;
+        width: 300px;
 
     }
+    #my-bio{
+        text-align: center;
+    }
+    h2, p{
+        text-align: left;
+    }
+    #part1,
+#part2,
+#part3,
+#part4,
+#part5{
+    float: none;
+}
 
 }
